@@ -1,0 +1,403 @@
+[gd_scene load_steps=39 format=2]
+
+[ext_resource path="res://picotron.ttf" type="DynamicFontData" id=1]
+[ext_resource path="res://debug_buglist.gd" type="Script" id=2]
+[ext_resource path="res://rect.png" type="Texture" id=3]
+[ext_resource path="res://tab.gd" type="Script" id=4]
+[ext_resource path="res://cross.png" type="Texture" id=5]
+[ext_resource path="res://click_light.wav" type="AudioStream" id=6]
+[ext_resource path="res://bold_circular_gauge.png" type="Texture" id=7]
+
+[sub_resource type="StyleBoxFlat" id=19]
+
+[sub_resource type="StyleBoxFlat" id=20]
+bg_color = Color( 0.835294, 0.835294, 0.835294, 1 )
+
+[sub_resource type="StyleBoxFlat" id=21]
+bg_color = Color( 1, 1, 1, 1 )
+
+[sub_resource type="StyleBoxLine" id=22]
+thickness = 6
+
+[sub_resource type="StyleBoxFlat" id=23]
+
+[sub_resource type="DynamicFont" id=17]
+size = 8
+font_data = ExtResource( 1 )
+
+[sub_resource type="DynamicFont" id=2]
+size = 8
+outline_color = Color( 0, 0, 0, 1 )
+font_data = ExtResource( 1 )
+
+[sub_resource type="StyleBoxFlat" id=10]
+content_margin_left = 5.0
+bg_color = Color( 0, 0, 0, 0 )
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+expand_margin_left = 2.0
+expand_margin_right = 2.0
+expand_margin_top = 2.0
+expand_margin_bottom = 2.0
+shadow_color = Color( 0, 0, 0, 0 )
+anti_aliasing = false
+
+[sub_resource type="StyleBoxFlat" id=3]
+content_margin_left = 5.0
+bg_color = Color( 0, 0, 0, 0.588235 )
+anti_aliasing = false
+
+[sub_resource type="StyleBoxFlat" id=35]
+bg_color = Color( 0, 0, 0, 0 )
+
+[sub_resource type="StyleBoxFlat" id=4]
+
+[sub_resource type="StyleBoxFlat" id=5]
+bg_color = Color( 0.835294, 0.835294, 0.835294, 1 )
+
+[sub_resource type="StyleBoxFlat" id=6]
+bg_color = Color( 1, 1, 1, 1 )
+
+[sub_resource type="StyleBoxLine" id=7]
+content_margin_left = 3.0
+content_margin_right = 3.0
+content_margin_top = 3.0
+content_margin_bottom = 3.0
+grow_begin = 4.0
+grow_end = 4.0
+thickness = 4
+vertical = true
+
+[sub_resource type="StyleBoxFlat" id=8]
+
+[sub_resource type="Theme" id=9]
+HScrollBar/styles/grabber = SubResource( 19 )
+HScrollBar/styles/grabber_highlight = SubResource( 20 )
+HScrollBar/styles/grabber_pressed = SubResource( 21 )
+HScrollBar/styles/scroll = SubResource( 22 )
+HScrollBar/styles/scroll_focus = SubResource( 23 )
+PopupMenu/colors/font_color = Color( 0.88, 0.88, 0.88, 1 )
+PopupMenu/colors/font_color_accel = Color( 0.7, 0.7, 0.7, 0.8 )
+PopupMenu/colors/font_color_disabled = Color( 0.4, 0.4, 0.4, 0.8 )
+PopupMenu/colors/font_color_hover = Color( 0, 0, 0, 1 )
+PopupMenu/colors/font_color_separator = Color( 1, 1, 1, 1 )
+PopupMenu/fonts/font = SubResource( 17 )
+PopupMenu/icons/checked = null
+PopupMenu/styles/hover = null
+PopupMenu/styles/labeled_separator_left = null
+PopupMenu/styles/labeled_separator_right = null
+PopupMenu/styles/panel = null
+PopupMenu/styles/panel_disabled = null
+PopupMenu/styles/separator = null
+TextEdit/colors/background_color = Color( 0, 0, 0, 0.145098 )
+TextEdit/colors/caret_background_color = Color( 0, 0, 0, 1 )
+TextEdit/colors/code_folding_color = Color( 0.8, 0.8, 0.8, 0.8 )
+TextEdit/colors/completion_background_color = Color( 0.17, 0.16, 0.2, 1 )
+TextEdit/colors/completion_font_color = Color( 0.67, 0.67, 0.67, 1 )
+TextEdit/colors/current_line_color = Color( 0, 0, 0, 1 )
+TextEdit/colors/font_color = Color( 1, 1, 1, 1 )
+TextEdit/colors/font_color_readonly = Color( 0.811765, 0.827451, 0.854902, 1 )
+TextEdit/colors/font_color_selected = Color( 0, 0, 0, 1 )
+TextEdit/colors/selection_color = Color( 0.101961, 0.129412, 0.572549, 1 )
+TextEdit/colors/word_highlighted_color = Color( 0, 0, 0, 1 )
+TextEdit/fonts/font = SubResource( 2 )
+TextEdit/icons/fold = null
+TextEdit/icons/folded = null
+TextEdit/icons/tab = null
+TextEdit/styles/focus = SubResource( 10 )
+TextEdit/styles/normal = SubResource( 3 )
+TextEdit/styles/read_only = SubResource( 35 )
+VScrollBar/styles/grabber = SubResource( 4 )
+VScrollBar/styles/grabber_highlight = SubResource( 5 )
+VScrollBar/styles/grabber_pressed = SubResource( 6 )
+VScrollBar/styles/scroll = SubResource( 7 )
+VScrollBar/styles/scroll_focus = SubResource( 8 )
+
+[sub_resource type="CanvasItemMaterial" id=33]
+blend_mode = 2
+
+[sub_resource type="DynamicFont" id=18]
+size = 8
+outline_color = Color( 0, 0, 0, 1 )
+font_data = ExtResource( 1 )
+
+[sub_resource type="StyleBoxFlat" id=24]
+bg_color = Color( 0, 0, 0, 0 )
+
+[sub_resource type="StyleBoxFlat" id=25]
+bg_color = Color( 0, 0, 0, 0 )
+
+[sub_resource type="StyleBoxFlat" id=26]
+bg_color = Color( 0, 0, 0, 0 )
+
+[sub_resource type="DynamicFont" id=11]
+size = 8
+font_data = ExtResource( 1 )
+
+[sub_resource type="StyleBoxFlat" id=12]
+bg_color = Color( 0, 0, 0, 1 )
+border_width_left = 1
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 1
+border_color = Color( 1, 1, 1, 1 )
+
+[sub_resource type="StyleBoxFlat" id=13]
+bg_color = Color( 1, 1, 1, 1 )
+
+[sub_resource type="StyleBoxFlat" id=30]
+bg_color = Color( 0, 0, 0, 0 )
+
+[sub_resource type="StyleBoxFlat" id=15]
+
+[sub_resource type="StyleBoxFlat" id=16]
+bg_color = Color( 0, 0, 0, 1 )
+border_width_left = 1
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 1
+border_color = Color( 0, 0, 0, 1 )
+anti_aliasing = false
+
+[sub_resource type="DynamicFont" id=32]
+size = 8
+outline_size = 1
+outline_color = Color( 0, 0, 0, 1 )
+font_data = ExtResource( 1 )
+
+[sub_resource type="StyleBoxFlat" id=29]
+bg_color = Color( 0, 0, 0, 0 )
+
+[sub_resource type="StyleBoxFlat" id=31]
+bg_color = Color( 0, 0, 0, 0 )
+border_width_left = 1
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 1
+border_color = Color( 0, 0, 0, 0 )
+anti_aliasing = false
+
+[sub_resource type="DynamicFont" id=34]
+
+[node name="buglist" type="CanvasLayer" groups=["buglist"]]
+pause_mode = 2
+layer = 128
+script = ExtResource( 2 )
+
+[node name="Control" type="Control" parent="."]
+margin_right = 40.0
+margin_bottom = 40.0
+
+[node name="NinePatchRect" type="NinePatchRect" parent="Control"]
+margin_left = 2.0
+margin_top = 23.0
+margin_right = 480.0
+margin_bottom = 326.0
+texture = ExtResource( 3 )
+patch_margin_left = 1
+patch_margin_top = 1
+patch_margin_right = 1
+patch_margin_bottom = 1
+
+[node name="ColorRect" type="ColorRect" parent="Control"]
+visible = false
+margin_left = 74.0
+margin_top = 31.0
+margin_right = 566.0
+margin_bottom = 341.0
+
+[node name="ColorRect2" type="ColorRect" parent="Control"]
+visible = false
+margin_left = 75.0
+margin_top = 32.0
+margin_right = 565.0
+margin_bottom = 340.0
+color = Color( 0, 0, 0, 1 )
+
+[node name="TextEdit" type="TextEdit" parent="Control"]
+margin_left = 3.0
+margin_top = 24.0
+margin_right = 479.0
+margin_bottom = 324.0
+focus_mode = 1
+mouse_filter = 1
+input_pass_on_modal_close_click = false
+theme = SubResource( 9 )
+highlight_current_line = true
+smooth_scrolling = true
+caret_blink = true
+caret_blink_speed = 0.3
+caret_moving_by_right_click = false
+
+[node name="tab" type="Control" parent="Control"]
+margin_left = 3.0
+margin_top = -8.0
+margin_right = 437.0
+margin_bottom = 24.0
+rect_clip_content = true
+
+[node name="add_tab" type="Sprite" parent="Control/tab"]
+position = Vector2( 49, 24 )
+scale = Vector2( 0.5, 0.5 )
+texture = ExtResource( 5 )
+
+[node name="tab" type="Node2D" parent="Control/tab"]
+position = Vector2( 20, 25 )
+script = ExtResource( 4 )
+
+[node name="ColorRect2" type="ColorRect" parent="Control/tab/tab"]
+margin_left = 1.0
+margin_top = -9.0
+margin_right = 19.0
+margin_bottom = 21.0
+color = Color( 0, 0, 0, 0.392157 )
+
+[node name="ColorRect" type="NinePatchRect" parent="Control/tab/tab"]
+margin_top = -10.0
+margin_right = 20.0
+margin_bottom = 16.0
+rect_clip_content = true
+texture = ExtResource( 3 )
+patch_margin_left = 1
+patch_margin_top = 1
+patch_margin_right = 1
+patch_margin_bottom = 1
+
+[node name="ColorRect3" type="ColorRect" parent="Control/tab/tab/ColorRect"]
+show_behind_parent = true
+material = SubResource( 33 )
+margin_left = 1.0
+margin_top = 20.0
+margin_right = 19.0
+margin_bottom = 30.0
+
+[node name="ColorRect4" type="ColorRect" parent="Control/tab/tab/ColorRect"]
+show_behind_parent = true
+margin_left = 1.0
+margin_top = 20.0
+margin_right = 324.0
+margin_bottom = 30.0
+color = Color( 0, 0, 0, 0.392157 )
+
+[node name="Label" type="LineEdit" parent="Control/tab/tab"]
+margin_left = 7.0
+margin_top = -4.0
+margin_right = 127.0
+margin_bottom = 4.0
+rect_clip_content = true
+custom_colors/font_color = Color( 1, 1, 1, 1 )
+custom_colors/font_color_uneditable = Color( 1, 1, 1, 1 )
+custom_fonts/font = SubResource( 18 )
+custom_styles/read_only = SubResource( 24 )
+custom_styles/focus = SubResource( 25 )
+custom_styles/normal = SubResource( 26 )
+text = "1"
+expand_to_text_length = true
+context_menu_enabled = false
+caret_blink = true
+caret_blink_speed = 0.2
+
+[node name="next" type="Position2D" parent="Control/tab/tab/Label"]
+
+[node name="Position2D" type="Position2D" parent="Control/tab"]
+position = Vector2( 20, 25 )
+
+[node name="tab_container" type="Control" parent="Control/tab"]
+margin_right = 40.0
+margin_bottom = 40.0
+
+[node name="ProgressBar" type="TextureProgress" parent="Control"]
+margin_left = 13.0
+margin_top = 18.0
+margin_right = 35.0
+margin_bottom = 40.0
+rect_pivot_offset = Vector2( 7, -1 )
+mouse_filter = 2
+input_pass_on_modal_close_click = false
+step = 0.01
+value = 55.0
+texture_under = ExtResource( 7 )
+texture_progress = ExtResource( 7 )
+fill_mode = 5
+tint_under = Color( 0, 0, 0, 1 )
+
+[node name="Button" type="Button" parent="Control"]
+margin_left = 454.0
+margin_top = 11.0
+margin_right = 479.0
+margin_bottom = 23.0
+focus_mode = 1
+mouse_filter = 1
+size_flags_horizontal = 0
+size_flags_vertical = 0
+custom_constants/hseparation = 4545
+custom_fonts/font = SubResource( 11 )
+custom_styles/hover = SubResource( 12 )
+custom_styles/pressed = SubResource( 13 )
+custom_styles/focus = SubResource( 30 )
+custom_styles/disabled = SubResource( 15 )
+custom_styles/normal = SubResource( 16 )
+text = "X"
+clip_text = true
+icon_align = 1
+
+[node name="Button2" type="Button" parent="Control"]
+margin_left = 436.0
+margin_top = 12.0
+margin_right = 453.0
+margin_bottom = 22.0
+mouse_filter = 1
+size_flags_horizontal = 0
+size_flags_vertical = 0
+custom_colors/font_color = Color( 1, 1, 1, 1 )
+custom_constants/hseparation = 4545
+custom_fonts/font = SubResource( 32 )
+custom_styles/hover = SubResource( 12 )
+custom_styles/pressed = SubResource( 13 )
+custom_styles/focus = SubResource( 29 )
+custom_styles/disabled = SubResource( 15 )
+custom_styles/normal = SubResource( 31 )
+text = "-"
+clip_text = true
+icon_align = 1
+
+[node name="typing_noise" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 6 )
+volume_db = -1.0
+pitch_scale = 3.0
+
+[node name="typing_noise2" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 6 )
+pitch_scale = 6.0
+
+[node name="title" type="RichTextLabel" parent="."]
+visible = false
+margin_left = -1043.0
+margin_right = -386.0
+margin_bottom = 488.0
+custom_fonts/normal_font = SubResource( 34 )
+text = "
+                            -- the little note taking app! --
+
+
+								 _._     _,-'\"\"`-._
+								(,-.`._,'(       |\\`-/|
+								    `-.-' \\ )-`( , o o)
+								          `-    \\`_`\"'-
+															    /\\_/\\           ___
+															   = o_o =_______    \\ \\ 
+															    __^      __(  \\.__) )
+															(@)<_____>__(_____)____/
+	           \\    /\\
+			    )  ( ')
+			    (  /  )
+			    \\(__)|"
+
+[connection signal="focus_entered" from="Control/TextEdit" to="." method="_on_TextEdit_focus_entered"]
+[connection signal="focus_exited" from="Control/TextEdit" to="." method="_on_TextEdit_focus_exited"]
+[connection signal="text_changed" from="Control/tab/tab/Label" to="." method="_on_Label_text_changed"]
+[connection signal="text_entered" from="Control/tab/tab/Label" to="." method="_on_Label_text_entered"]
+[connection signal="pressed" from="Control/Button" to="." method="_on_Button_pressed"]
+[connection signal="pressed" from="Control/Button2" to="." method="_on_Button2_pressed"]
