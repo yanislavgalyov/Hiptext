@@ -1,0 +1,13 @@
+[gd_resource type="Resource" script_class="Buglist" load_steps=2 format=3 uid="uid://corgnl7117vx2"]
+
+[ext_resource type="Script" path="res://resources/buglist.gd" id="1_wtpjm"]
+
+[resource]
+resource_name = "1"
+script = ExtResource("1_wtpjm")
+saved_text = Array[String](["Welcome!"])
+text_names = Array[String](["0"])
+caret_line = Array[int]([0])
+caret_column = Array[int]([0])
+scroll = Array[int]([0])
+active_index = -1
