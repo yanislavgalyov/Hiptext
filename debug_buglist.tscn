@@ -1,9 +1,9 @@
 [gd_scene load_steps=38 format=3 uid="uid://c1k1lgmr4xtab"]
 
 [ext_resource type="FontFile" uid="uid://bkrqg3u6n5dvr" path="res://assets/fonts/picotron.ttf" id="1"]
-[ext_resource type="Script" path="res://debug_buglist.gd" id="2"]
+[ext_resource type="Script" uid="uid://cfh6svhfx0msm" path="res://debug_buglist.gd" id="2"]
 [ext_resource type="Texture2D" uid="uid://dir68231l032" path="res://assets/images/rect.png" id="3"]
-[ext_resource type="Script" path="res://tab.gd" id="4"]
+[ext_resource type="Script" uid="uid://btthb0jt17ilv" path="res://tab.gd" id="4"]
 [ext_resource type="Texture2D" uid="uid://dv1888plvrayg" path="res://assets/images/cross.png" id="5"]
 [ext_resource type="AudioStream" uid="uid://cnxq4y7paottp" path="res://assets/sound/click_light.wav" id="6"]
 [ext_resource type="Texture2D" uid="uid://ci4a2dgia7hk7" path="res://assets/images/bold_circular_gauge.png" id="7"]

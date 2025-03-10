@@ -1,6 +1,6 @@
 [gd_resource type="Resource" load_steps=4 format=3 uid="uid://ihki00md7brl"]
 
-[ext_resource type="Script" path="res://addons/gdscript_formatter/scripts/preference.gd" id="1_0np06"]
+[ext_resource type="Script" uid="uid://5j68gkx01nsi" path="res://addons/gdscript_formatter/scripts/preference.gd" id="1_0np06"]
 
 [sub_resource type="InputEventKey" id="InputEventKey_lngqj"]
 alt_pressed = true
